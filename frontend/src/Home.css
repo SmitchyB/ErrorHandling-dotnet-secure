@@ -1,0 +1,127 @@
+/* Home.css */
+.home-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  box-sizing: border-box;
+}
+
+.Home-logo {
+  height: 80px;
+  pointer-events: none;
+  margin-bottom: 20px;
+  /* Added: Spinning animation for the logo */
+  animation: App-logo-spin infinite 20s linear;
+}
+
+/* Added: Keyframes for the spinning animation */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+h2 {
+  color: #34495e;
+  margin-bottom: 20px;
+}
+
+.error-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 8px; /* Rounded corners */
+  box-sizing: border-box;
+  font-size: 1em;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+.submit-button {
+  background-color: #dc3545; /* Red for error trigger */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.submit-button:hover {
+  background-color: #c82333; /* Darker red on hover */
+  transform: translateY(-2px);
+}
+
+.submit-button:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.error-display {
+  background-color: #f8d7da; /* Light red background */
+  border: 1px solid #dc3545; /* Red border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px;
+  margin-top: 30px;
+  text-align: left;
+  color: #721c24; /* Dark red text */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.error-display h3 {
+  color: #dc3545;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.error-display p strong {
+  color: #721c24;
+}
+
+.response-body-pre {
+  background-color: #fff3f3; /* Even lighter red for code block */
+  border: 1px dashed #dc3545;
+  padding: 15px;
+  border-radius: 8px; /* Rounded corners */
+  white-space: pre-wrap; /* Preserve whitespace and wrap text */
+  word-break: break-word; /* Break long words */
+  max-height: 400px; /* Limit height for long stack traces */
+  overflow-y: auto; /* Enable scrolling for long content */
+  font-family: 'Consolas', 'Courier New', monospace; /* Monospaced font for code */
+  font-size: 0.9em;
+  color: #333;
+}
